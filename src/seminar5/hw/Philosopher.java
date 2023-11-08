@@ -38,7 +38,6 @@ public class Philosopher implements Runnable {
             synchronized (leftFork) {
                 System.out.println(name + " берет левую вилку");
                 leftFork.takeFork();
-//                }
                 synchronized (rightFork) {
                     System.out.println(name + " берет правую вилку");
                     rightFork.takeFork();
@@ -47,7 +46,6 @@ public class Philosopher implements Runnable {
                     System.out.println(name + " кладет правую вилку");
                     rightFork.putFork();
                 }
-//                }
                 System.out.println(name + " кладет левую вилку");
                 leftFork.putFork();
             }
